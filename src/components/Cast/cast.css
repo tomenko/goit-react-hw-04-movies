@@ -2,3 +2,20 @@
   width: 200px;
   height: 300px;
 }
+
+.cast {
+  padding: 0;
+  margin: 0;
+  width: 900px;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 25px;
+}
+
+.Cast li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

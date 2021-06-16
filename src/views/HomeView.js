@@ -10,16 +10,14 @@ class HomeView extends Component {
     async componentDidMount() {
         const trending = await api.fetchMovies();
         this.setState({ trending });
-        console.log(trending);
         
     }
     
     render() {
         let movUrl = this.props.match.url;
-        console.log(this.props.match.url);
         return (<>
-            <h1>Trending movies</h1>
-            <MoviesList movies={this.state.trending} movUrl={movUrl}/>
+            <h1 className="title">Trending movies</h1>
+            <MoviesList {...this.props} movies={this.state.trending} movUrl={movUrl}/>
         </>);
     }
 }

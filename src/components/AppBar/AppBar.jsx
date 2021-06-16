@@ -5,7 +5,9 @@ import Navigation from '../Navigation';
 
 const AppBar = () => {
     return (
-        <Navigation/>
+        <header>
+            <Navigation/>
+        </header>
     );
 }
  

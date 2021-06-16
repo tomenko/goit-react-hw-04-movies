@@ -1,13 +1,17 @@
-import { Link } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
+import MoviePreview from '../MoviePreview';
 
-const MoviesList = ({movies}) => {
+const MoviesList = ({movies, location}) => {
     return (
         <>
-            <ul>{movies.map(
-                ({id, original_title, original_name}) => <li className="movies-list" key={id}>
-                    <Link to={`/movies/${id}`}>
-                        {original_title || original_name}
-                    </Link>
+            <ul className="movieList">{movies.map(
+                ({id, original_title, original_name, poster_path}) => <li className="movies-list" key={id}>
+                    <NavLink to={{
+                        pathname: `/movies/${id}`,
+                        state: { from: location, }
+                    }}>
+                        <MoviePreview title={original_title} name={original_name} poster_path={poster_path}/>
+                    </NavLink>
                 </li>
               )}
             </ul>
@@ -15,4 +19,4 @@ const MoviesList = ({movies}) => {
     );
 }
  
-export default MoviesList;
+export default withRouter(MoviesList);

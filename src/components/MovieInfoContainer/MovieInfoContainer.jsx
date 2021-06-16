@@ -1,3 +1,4 @@
+import './movieInfoContainer.css'
 import React, { Component, createRef } from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import Cast from '../Cast';
@@ -26,14 +27,14 @@ class MovieInfoContainer extends Component {
 				<h3>Additional info</h3>
 				<ul>
 					<li>
-						<NavLink to={{pathname: `${match.url}/cast`/* , state: {from: this.state.pathState.from}  */}} className="NavLink" activeClassName="NavLink--active">Cast</NavLink>
+						<NavLink to={{pathname: `${match.url}/cast`, state: {from: this.state.pathState.from} }} className="NavLink" activeClassName="NavLink--active">Cast</NavLink>
 					</li>
 					<li>
-						<NavLink to={{ pathname: `${match.url}/reviews`/* , state: { from: this.state.pathState.from } */ }} className="NavLink" activeClassName="NavLink--active">Reviews</NavLink>
+						<NavLink to={{ pathname: `${match.url}/reviews`, state: { from: this.state.pathState.from } }} className="NavLink" activeClassName="NavLink--active">Reviews</NavLink>
 					</li>
 				</ul>
 
-				<div ref={ulRef}>
+				<div className="movieInfoContainer" ref={ulRef}>
 					{cast &&
 						<Route
 						path={`${match.path}/cast`}

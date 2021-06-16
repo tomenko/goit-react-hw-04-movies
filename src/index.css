@@ -25,6 +25,7 @@ ul {
 
 img {
   display: block;
+  margin: 10px;
 }
 
 .goBackBtn {
@@ -33,12 +34,11 @@ img {
   margin-left: 20px;
 }
 
-/* form {
-  display: flex;
-  flex-direction: column;
+form {
+  display: block;
 }
 
-label {
+/* label {
   margin: 10px 0 10px 0;
 } */
 
@@ -51,16 +51,16 @@ li {
   align-items: center;
 }
 
-.movies-list :hover {
+/* .movies-list :hover {
   color: green;
   background-color: indianred;
 }
-
+ */
 a {
   text-decoration: none;
 }
 
-.AppBar {
+.navigation {
   display: flex;
   list-style: none;
   padding: 0;
@@ -68,7 +68,7 @@ a {
   box-shadow: 0 5px 5px -5px #020200;
 }
 
-.AppBar li {
+.navigation li {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -81,4 +81,33 @@ a {
 
 .NavLink--active {
   color: crimson;
+}
+
+.MovieDetailsView {
+  display: block;
+  width: 700px;
+}
+
+.movieList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 24px;
+}
+
+.movieList li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moviePreview {
+  display: block;
+  width: 200px;
+  border-radius: 5px;
+  border-color: aqua;
+  border: 1px;
 }

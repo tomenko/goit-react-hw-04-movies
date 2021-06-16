@@ -1,3 +1,5 @@
+import './rewiews.css';
+
 const Reviews = ({ reviews }) => {
 	return (
         <ul>
@@ -6,7 +8,7 @@ const Reviews = ({ reviews }) => {
                 ) : (
                 
                     reviews.map(({ id, author, content }) => (
-                        <li key={id}>
+                        <li className="rewiews" key={id}>
                             <h4>Author: {author}</h4>
                             <p>{content}</p>
                         </li>

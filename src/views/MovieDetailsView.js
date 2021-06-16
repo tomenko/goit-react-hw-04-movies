@@ -23,9 +23,10 @@ class MovieDetailsView extends Component {
     handleGoBack = () => {
       const { history, location } = this.props;
       history.push(location?.state?.from || routes.home);
+      console.log(history, location);
     };
     
-    render() {
+  render() {
         const {
             backdrop_path,
             id,
@@ -35,10 +36,11 @@ class MovieDetailsView extends Component {
             genres,
             poster_path,
         } = this.state.movie;
+        
       
 
         return (
-          <>
+          <div className="MovieDetailsView">
             
             <button
               type="button"
@@ -72,7 +74,7 @@ class MovieDetailsView extends Component {
                 }}
               />
             )}
-          </>
+          </div>
         );
     }
 };

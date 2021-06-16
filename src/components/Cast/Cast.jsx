@@ -4,7 +4,7 @@ const IMG_URL = 'https://image.tmdb.org/t/p/w200'
 
 const Cast = ({ cast }) => {
 	return (
-		<ul>
+		<ul className="cast">
 			{cast.map(({ id, profile_path, name, character }) => (
 				<li key={id}>
 					<div>
